@@ -1,7 +1,0 @@
-feign-clients:
-  google-maps:
-    name: ${MAPS_SERVICE_NAME:maps-service}
-    url: ${MAPS_URL:https://maps.googleapis.com}
-    key: ${MAPS_AUTH_KEY:AIzaSyDMgZCaKTmfx5qgpUxlFZDdbCzBZhm_txI}
-server:
-  port: 2425
