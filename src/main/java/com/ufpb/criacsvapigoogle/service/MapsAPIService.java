@@ -56,7 +56,7 @@ public class MapsAPIService {
         for (PontoCSV ponto : pontos) {
             responseAPI = getRotas(getLatitudeLongetude(ponto), getLatitudeLongetude(portaoPrincipal));
             rotas.add(getRotaFromMapsResponse(responseAPI,
-                    ponto.getName() + " " + portaoPrincipal.getName(),
+                    ponto.getName() + " - " + portaoPrincipal.getName(),
                     ponto.getId(),
                     portaoPrincipal.getId()));
         }
