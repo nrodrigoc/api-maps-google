@@ -13,4 +13,8 @@ public class RouteResponse {
 
     @JsonProperty("routes")
     private List<Route> routes;
+
+    public List<Route> getRoutes() {
+        return routes;
+    }
 }

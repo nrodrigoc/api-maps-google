@@ -2,6 +2,8 @@ package com.ufpb.criacsvapigoogle.feign.mapsapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 public class Leg {
 
     @JsonProperty("distance")
@@ -22,16 +24,21 @@ public class Leg {
     @JsonProperty("start_location")
     private StartLocation startLocation;
 
+    @JsonProperty("steps")
+    private List<Step> steps;
+
     public Leg() {
     }
 
-    public Leg(Distance distance, Duration duration, String endAddress, EndLocation endLocation, String startAddress, StartLocation startLocation) {
+    public Leg(Distance distance, Duration duration, String endAddress, EndLocation endLocation,
+               String startAddress, StartLocation startLocation, List<Step> steps) {
         this.distance = distance;
         this.duration = duration;
         this.endAddress = endAddress;
         this.endLocation = endLocation;
         this.startAddress = startAddress;
         this.startLocation = startLocation;
+        this.steps = steps;
     }
 
     public Distance getDistance() {
@@ -80,5 +87,13 @@ public class Leg {
 
     public void setStartLocation(StartLocation startLocation) {
         this.startLocation = startLocation;
+    }
+
+    public List<Step> getSteps() {
+        return steps;
+    }
+
+    public void setSteps(List<Step> steps) {
+        this.steps = steps;
     }
 }
